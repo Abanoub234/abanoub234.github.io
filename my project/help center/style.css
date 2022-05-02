@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=quicksand:wght@400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body {
+    font-family: "Quicksend", sans-serif;
+    justify-content: baseline;
+    align-items: baseline;
+    min-height: 100vh;
+    background: linear-gradient(rgb(255, 242, 60), rgb(255, 242, 60) 10%, #fff, #fff 50%);
+}
+
+.title {
+    text-align: center;
+    padding: 50px 0;
+    color: #000;
+}
+
+.title h1 {
+    padding: 30px;
+}
+
+.title input {
+    padding: 12px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.title input::placeholder {
+    font-family: inherit;
+}
+
+section {
+    min-height: 100vh;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.fag {
+    margin-bottom: 1rem;
+    margin-top: 3rem;
+    border-bottom: 2px solid #000;
+    cursor: pointer;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.question h3 {
+    font-size: 1.2rem;
+}
+
+.answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-hight 2s ease;
+}
+
+.answer p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.fag.active .answer {
+    max-height: 300px;
+    animation: fade 2s ease-in-out;
+}
+
+.fag.active svg {
+    transform: rotate(180deg);
+}
+
+svg {
+    transition: transform 0.5s ease-in;
+}
+
+button {
+    padding: 10px 15px;
+    width: 150px;
+    border: 4px #000;
+    border-radius: 15px;
+    background-color: rgb(255, 240, 27);
+    color: #000;
+    font-family: inherit;
+    transition: background-color 0.4s;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 241, 51);
+    color: #fff;
+}
+
+.more-info {
+    text-align: center;
+    line-height: 1.5cm;
+}
+
+@keyframes fade {
+    form {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
